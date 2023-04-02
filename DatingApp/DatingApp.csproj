@@ -26,4 +26,8 @@
       <Compile Remove="WeatherForecast.cs" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="ffff" />
+    </ItemGroup>
+
 </Project>
