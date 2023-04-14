@@ -1,9 +1,9 @@
 using DatingApp.Entities;
 
-namespace DatingApp.Interfaces;
-
-public interface ITokenService
+namespace API.Interfaces
 {
-    string CreateToken(AppUser user);
-    
+    public interface ITokenService
+    {
+        Task<string> CreateToken(AppUser user);
+    }
 }

@@ -1,22 +1,27 @@
+using API.Helpers;
+using API.Interfaces;
+using API.Services;
+using API.SignalR;
 using DatingApp.Data;
-using DatingApp.Interfaces;
-using DatingApp.Services;
-using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.Extensions;
-
-public static class ApplicationServiceExtensions
+namespace API.Extensions
 {
-    public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration config)
+    public static class ApplicationServiceExtensions
     {
-        services.AddDbContext<DataContext>(opt =>
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services,
+            IConfiguration config)
         {
-            opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
-        });
-        services.AddCors();
-        services.AddScoped<ITokenService,TokenService>();
-        services.AddScoped<IUserRepository, UserRepository>();
-        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-        return services;
+            services.AddCors();
+            services.AddScoped<ITokenService, TokenService>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+            services.AddScoped<IPhotoService, PhotoService>();
+            services.AddScoped<LogUserActivity>();
+            services.AddSignalR();
+            services.AddSingleton<PresenceTracker>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            return services;
+        }
     }
 }
