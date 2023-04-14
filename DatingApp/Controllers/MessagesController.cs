@@ -1,10 +1,9 @@
-
+using API.DTOs;
+using API.Entities;
 using API.Extensions;
 using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
-using DatingApp.DTOs;
-using DatingApp.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers

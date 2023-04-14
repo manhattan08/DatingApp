@@ -1,17 +1,16 @@
+using API.DTOs;
+using API.Entities;
 using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using DatingApp.DTOs;
-using DatingApp.Entities;
-
 using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.Data;
-
-public class UserRepository : IUserRepository
+namespace API.Data
 {
-   private readonly DataContext _context;
+    public class UserRepository : IUserRepository
+    {
+        private readonly DataContext _context;
         private readonly IMapper _mapper;
         public UserRepository(DataContext context, IMapper mapper)
         {
@@ -75,4 +74,5 @@ public class UserRepository : IUserRepository
         {
             _context.Entry(user).State = EntityState.Modified;
         }
+    }
 }

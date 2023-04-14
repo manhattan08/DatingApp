@@ -1,8 +1,8 @@
+using API.DTOs;
+using API.Entities;
 using API.Extensions;
 using API.Interfaces;
 using AutoMapper;
-using DatingApp.DTOs;
-using DatingApp.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 
@@ -83,7 +83,7 @@ namespace API.SignalR
                 if (connections != null)
                 {
                     await _presenceHub.Clients.Clients(connections).SendAsync("NewMessageReceived",
-                        new {username = sender.UserName, knownAs = sender.KnowsAs});
+                        new {username = sender.UserName, knownAs = sender.KnownAs});
                 }
             }
 

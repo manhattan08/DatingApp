@@ -1,6 +1,6 @@
+using API.DTOs;
+using API.Entities;
 using API.Helpers;
-using DatingApp.DTOs;
-using DatingApp.Entities;
 using Newtonsoft.Json.Linq;
 
 namespace API.Interfaces

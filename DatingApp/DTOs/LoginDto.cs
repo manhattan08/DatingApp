@@ -1,7 +1,8 @@
-namespace DatingApp.DTOs;
-
-public class LoginDto
+namespace API.DTOs
 {
-    public string Username { get; set; }
-    public string Password { get; set; }
+    public class LoginDto
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
 }

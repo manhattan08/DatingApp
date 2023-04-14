@@ -1,19 +1,21 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace DatingApp.Entities;
-
-public class Group
+namespace API.Entities
 {
-    public Group()
+    public class Group
     {
-        
-    }
-    public Group(string name)
-    {
-        Name = name;
-    }
-    [Key]
-    public string Name { get; set; }
+        public Group()
+        {
+            
+        }
 
-    public ICollection<Connection> Connections { get; set; } = new List<Connection>();
+        public Group(string name)
+        {
+            Name = name;
+        }
+
+        [Key]
+        public string Name { get; set; }
+        public ICollection<Connection> Connections { get; set; } = new List<Connection>();
+    }
 }

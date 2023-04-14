@@ -97,3 +97,6 @@ D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Microsoft.AspNetCo
 D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\DatingApp.staticwebassets.runtime.json
+D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Npgsql.dll
+D:\work\ASP.NET\facebook\DatingApp\DatingApp\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

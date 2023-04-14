@@ -1,16 +1,16 @@
+using API.DTOs;
+using API.Entities;
 using API.Helpers;
 using API.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using DatingApp.Data;
-using DatingApp.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace DatingApp.DTOs;
-
-public class MessageRepository : IMessageRepository
+namespace API.Data
 {
-     private readonly DataContext _context;
+    public class MessageRepository : IMessageRepository
+    {
+        private readonly DataContext _context;
         private readonly IMapper _mapper;
         public MessageRepository(DataContext context, IMapper mapper)
         {
@@ -111,4 +111,5 @@ public class MessageRepository : IMessageRepository
         {
             _context.Connections.Remove(connection);
         }
+    }
 }

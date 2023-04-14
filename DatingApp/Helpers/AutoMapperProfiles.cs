@@ -1,7 +1,7 @@
+using API.DTOs;
+using API.Entities;
 using API.Extensions;
 using AutoMapper;
-using DatingApp.DTOs;
-using DatingApp.Entities;
 
 namespace API.Helpers
 {
